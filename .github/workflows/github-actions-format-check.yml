@@ -5,7 +5,7 @@ on:
     branches:
       - main
       - develop
-      - 'feature/*'
+      - "feature/*"
     # 処理が走るタイミングはプルリク作成時、追加のコミットPush、閉じたプルリクの再開
     types: [opened, synchronize, reopened]
 env:
@@ -27,8 +27,8 @@ jobs:
 
       - name: Check Run
         run: |
-          yarn install
-          yarn prettier --check .
+          npm install
+          npm prettier --check .
 
       - name: Report Prettier errors
         if: failure() # Prettier checkでエラーが発生した場合のみ実行
