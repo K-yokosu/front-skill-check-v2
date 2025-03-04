@@ -27,6 +27,7 @@ jobs:
 
       - name: Build Run
         run: |
+          cd src/
           npm install
           npm run build
 

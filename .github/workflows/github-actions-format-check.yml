@@ -27,6 +27,7 @@ jobs:
 
       - name: Check Run
         run: |
+          cd src/
           npm install
           npm prettier --check .
 
