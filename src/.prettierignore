@@ -12,9 +12,8 @@
 # JSONファイルを無視：
 package.json
 package-lock.json
-component.json
-.eslintrc.json
+tsconfig.json
 
 # 設定ファイルを無視：
-tsconfig.json
 next.config.js
+eslint.config.mjs
