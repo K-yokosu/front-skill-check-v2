@@ -60,7 +60,7 @@ const eslintConfig = [
             },
             {
               target: "**/components/**",
-              extensions: [".tsx"]
+              extensions: [".ts", ".tsx"]
             },
             {
               target: "**/hooks/**",
