@@ -1,0 +1,48 @@
+.searchIconContainer {
+  width: 30px;
+  height: 30px;
+  border: 1px solid var(--tertiary-color);
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--primary-color);
+}
+
+.searchIconContainer:hover,
+.searchIconContainer:active {
+  background-color: var(--tertiary-color);
+}
+
+.searchIconContainer .searchIcon {
+  width: 20px;
+  height: 20px;
+  fill: var(--tertiary-color);
+  stroke: var(--primary-color);
+  stroke-width: 1;
+}
+
+/* ホバー時にアイコンの色も変更 */
+.searchIconContainer:hover .searchIcon,
+.searchIconContainer:active .searchIcon {
+  fill: var(--primary-color);
+  stroke: var(--tertiary-color);
+}
+
+/* モバイル（基本スタイル） */
+@media (max-width: 480px) {
+}
+
+/* タブレット（縦） */
+@media (min-width: 481px) {
+  .searchIconContainer {
+    width: 36px;
+    height: 36px;
+    border-radius: 18px;
+  }
+
+  .searchIconContainer .searchIcon {
+    width: 24px;
+    height: 24px;
+  }
+}
