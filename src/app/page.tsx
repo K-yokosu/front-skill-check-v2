@@ -1,7 +1,9 @@
+import LocationInput from "@/features/top/location/comoponents/LocationInput";
+
 export default function Home() {
   return (
     <>
-      <div>page 1</div>
+      <LocationInput />
     </>
   );
 }
