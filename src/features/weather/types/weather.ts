@@ -1,10 +1,12 @@
 export type WeatherForecastType = {
   location: LocationType;
   current: CurrentType;
-  forecastday: ForecastdayType[];
+  forecast: {
+    forecastday: ForecastdayType[];
+  };
 };
 
-type ForecastdayType = {
+export type ForecastdayType = {
   date: string;
   date_epoch: number;
   astro: AstroType;
@@ -23,7 +25,7 @@ type LocationType = {
   localtime_epoch: number;
 };
 
-type CurrentType = {
+export type CurrentType = {
   last_updated: string;
   last_updated_epoch: number;
   temp_c: number;
