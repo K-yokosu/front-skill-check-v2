@@ -6,6 +6,12 @@ export type WeatherForecastType = {
   };
 };
 
+export type SpecificDayWeatherType = {
+  location: LocationType;
+  current: CurrentType;
+  forecastday: ForecastdayType;
+};
+
 export type ForecastdayType = {
   date: string;
   date_epoch: number;

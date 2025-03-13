@@ -1,0 +1,38 @@
+.specificDayWeatherContainer {
+  width: 85%;
+  margin-top: 24px;
+}
+
+.specificDayWeatherContainer table {
+  width: 100%;
+}
+
+.specificDayWeatherContainer table tbody {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 45vh;
+  overflow-y: scroll;
+}
+
+.specificDayWeatherContainer tr {
+  height: 36px;
+}
+
+.specificDayWeatherContainer tr td:first-child {
+  width: 65px;
+}
+.specificDayWeatherContainer tr td:nth-child(2) {
+  width: 30px;
+}
+
+.specificDayWeatherContainer tr td:nth-child(3) {
+  width: 55px;
+  color: var(--secondary-color);
+  text-align: right;
+}
+
+.specificDayWeatherContainer tr td:nth-child(4) {
+  width: 55px;
+  text-align: right;
+}
