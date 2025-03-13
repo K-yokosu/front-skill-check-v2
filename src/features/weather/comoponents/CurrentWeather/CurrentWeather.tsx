@@ -3,8 +3,11 @@ import Image from "next/image";
 import styles from "./currentWeather.module.css";
 import { CurrentType } from "../../types/weather";
 import { WiDirectionUpRight } from "react-icons/wi";
+import { getDayText } from "../../lib/weathr";
 
 export default function CurrentWeather({ currentWeather, locationName, localDay }: { currentWeather: CurrentType; locationName: string; localDay: string }) {
+  const dayText = getDayText(currentWeather.condition.code);
+
   return (
     <div className={styles.currentWeatherContainer}>
       <div className={styles.detailLink}>
@@ -17,7 +20,7 @@ export default function CurrentWeather({ currentWeather, locationName, localDay 
       </div>
       <div className={styles.currentWeatherInfo}>
         <div className={styles.weather}>
-          <span>{currentWeather.condition.text}</span>
+          <span>{dayText}</span>
           <Image src={`https:${currentWeather.condition.icon}`} alt={currentWeather.condition.text} width={40} height={40} />
         </div>
         <div className={styles.currentTempC}>{currentWeather.temp_c}℃</div>
