@@ -13,7 +13,7 @@ export default function ForecastWeather({ forecastdays, locationName }: { foreca
             <tr key={forecastday.date} className={styles.forecastWeatherItemContainer}>
               <td>{forecastday.date}</td>
               <td>
-                <Image src={`https:${forecastday.day.condition.icon}`} alt={forecastday.day.condition.text} width={20} height={20} />
+                <Image src={`https:${forecastday.day.condition.icon}`} alt={forecastday.day.condition.text} width={40} height={40} />
               </td>
               <td>{forecastday.day.mintemp_c}℃</td>
               <td>{forecastday.day.maxtemp_c}℃</td>

@@ -11,7 +11,7 @@ export default function SpecificDayWeather({ specificDayWeather }: { specificDay
       <div className={styles.specificDayWeatherInfo}>
         <div className={styles.weather}>
           <span>{specificDayWeather.forecastday.day.condition.text}</span>
-          <Image src={`https:${specificDayWeather.forecastday.day.condition.icon}`} alt={specificDayWeather.forecastday.day.condition.text} width={20} height={20} />
+          <Image src={`https:${specificDayWeather.forecastday.day.condition.icon}`} alt={specificDayWeather.forecastday.day.condition.text} width={40} height={40} />
         </div>
         <div className={styles.weatherItemContainer}>
           <div className={styles.weatherItem}>

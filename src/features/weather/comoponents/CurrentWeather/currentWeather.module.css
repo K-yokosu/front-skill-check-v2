@@ -1,7 +1,7 @@
 .currentWeatherContainer {
   border: 1px solid var(--secondary-color);
-  width: 80%;
-  height: 30vh;
+  width: 70%;
+  height: 220px;
   border-radius: 16px;
   margin-top: 20px;
   padding: 6px;
@@ -51,4 +51,90 @@
 .weatherItemContainer .weatherItem {
   display: flex;
   flex-direction: column;
+}
+
+@media (min-width: 481px) and (max-width: 650px) {
+  .currentWeatherContainer {
+    margin-top: 28px;
+    padding: 6px;
+    width: 70%;
+    max-width: 525px;
+    height: 250px;
+  }
+
+  .currentWeatherContainer .detailLink {
+    font-size: 24px;
+  }
+
+  .currentWeatherHeader h2 {
+    font-size: 28px;
+  }
+
+  .currentWeatherInfo {
+    margin-top: 12px;
+  }
+
+  .currentWeatherInfo .currentTempC {
+    font-size: 36px;
+    margin: 10px 0px;
+  }
+
+  .currentWeatherInfo .weather {
+    gap: 0.5rem;
+  }
+
+  .currentWeatherInfo .weather span {
+    font-size: 20px;
+  }
+
+  .currentWeatherInfo .weatherItemContainer {
+    gap: 2rem;
+  }
+
+  .weatherItemContainer .weatherItem p {
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 651px) {
+  .currentWeatherContainer {
+    margin-top: 28px;
+    padding: 6px;
+    width: 70%;
+    max-width: 525px;
+    height: 330px;
+  }
+
+  .currentWeatherContainer .detailLink {
+    font-size: 28px;
+  }
+
+  .currentWeatherHeader h2 {
+    font-size: 32px;
+  }
+
+  .currentWeatherInfo {
+    margin-top: 20px;
+  }
+
+  .currentWeatherInfo .currentTempC {
+    font-size: 40px;
+    margin: 14px 0px;
+  }
+
+  .currentWeatherInfo .weather {
+    gap: 1rem;
+  }
+
+  .currentWeatherInfo .weather span {
+    font-size: 28px;
+  }
+
+  .currentWeatherInfo .weatherItemContainer {
+    gap: 3rem;
+  }
+
+  .weatherItemContainer .weatherItem p {
+    font-size: 28px;
+  }
 }

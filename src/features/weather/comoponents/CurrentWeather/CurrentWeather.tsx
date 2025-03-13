@@ -18,7 +18,7 @@ export default function CurrentWeather({ currentWeather, locationName, localDay 
       <div className={styles.currentWeatherInfo}>
         <div className={styles.weather}>
           <span>{currentWeather.condition.text}</span>
-          <Image src={`https:${currentWeather.condition.icon}`} alt={currentWeather.condition.text} width={20} height={20} />
+          <Image src={`https:${currentWeather.condition.icon}`} alt={currentWeather.condition.text} width={40} height={40} />
         </div>
         <div className={styles.currentTempC}>{currentWeather.temp_c}℃</div>
         <div className={styles.weatherItemContainer}>

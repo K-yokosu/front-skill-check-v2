@@ -11,7 +11,7 @@ export default function SpecificDayWeatherHour({ specificDayWeather }: { specifi
             <tr key={item.time} className={styles.specificDayWeatherItemContainer}>
               <td>{item.time.split(" ")[1]}</td>
               <td>
-                <Image src={`https:${item.condition.icon}`} alt={item.condition.text} width={20} height={20} />
+                <Image src={`https:${item.condition.icon}`} alt={item.condition.text} width={40} height={40} />
               </td>
               <td>{item.temp_c}℃</td>
               <td>{item.temp_c}℃</td>
