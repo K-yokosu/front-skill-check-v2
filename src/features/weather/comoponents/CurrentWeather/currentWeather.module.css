@@ -4,20 +4,20 @@
   height: 30vh;
   border-radius: 16px;
   margin-top: 20px;
-  padding: 20px;
+  padding: 6px;
 }
 
 .currentWeatherContainer .detailLink {
   text-align: right;
   margin-left: auto;
-  font-size: 12px;
+  font-size: 24px;
 }
 .currentWeatherContainer .detailLink:hover {
   color: var(--secondary-color);
 }
 
 .currentWeatherContainer .currentWeatherHeader {
-  margin-top: 3px;
+  margin-top: 0px;
 }
 
 .currentWeatherHeader h2 {

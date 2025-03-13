@@ -9,7 +9,6 @@ export default function CurrentWeather({ currentWeather, locationName, localDay 
     <div className={styles.currentWeatherContainer}>
       <div className={styles.detailLink}>
         <Link href={`/${locationName}?day=${localDay}`}>
-          詳細
           <WiDirectionUpRight />
         </Link>
       </div>
