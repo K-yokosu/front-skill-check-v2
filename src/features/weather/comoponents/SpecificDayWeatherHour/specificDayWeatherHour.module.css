@@ -5,34 +5,69 @@
 
 .specificDayWeatherContainer table {
   width: 100%;
+  border-spacing: 0;
 }
 
-.specificDayWeatherContainer table tbody {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.specificDayWeatherContainer {
   height: 45vh;
   overflow-y: scroll;
 }
 
-.specificDayWeatherContainer tr {
-  height: 36px;
+.specificDayWeatherContainer thead {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
 }
 
-.specificDayWeatherContainer tr td:first-child {
-  width: 65px;
+.specificDayWeatherContainer td {
+  border-bottom: 0.5px solid var(--secondary-color);
 }
-.specificDayWeatherContainer tr td:nth-child(2) {
-  width: 30px;
+
+.specificDayWeatherContainer tr:hover {
+  background-color: var(--secondary-color);
+}
+
+.specificDayWeatherContainer tr {
+  height: 40px;
+  font-size: 1rem;
 }
 
 .specificDayWeatherContainer tr td:nth-child(3) {
-  width: 55px;
   color: var(--secondary-color);
   text-align: right;
 }
 
+.specificDayWeatherContainer tr td:nth-child(3):hover {
+  color: var(--primary-color);
+}
+
 .specificDayWeatherContainer tr td:nth-child(4) {
-  width: 55px;
   text-align: right;
+}
+
+@media (min-width: 481px) and (max-width: 650px) {
+  .specificDayWeatherContainer tr {
+    height: 48px;
+    font-size: 1.2rem;
+  }
+}
+
+@media (min-width: 651px) and (max-width: 799px) {
+  .specificDayWeatherContainer tr {
+    height: 55px;
+    font-size: 1.5rem;
+  }
+}
+@media (min-width: 800px) {
+  .specificDayWeatherContainer {
+    width: 660px;
+  }
+
+  .specificDayWeatherContainer tr {
+    height: 55px;
+    font-size: 24px;
+  }
 }
