@@ -9,7 +9,13 @@ type SearchParams = Promise<{ [key: string]: string | undefined }>;
 export default async function Page(props: { searchParams: SearchParams }) {
   const searchParams = await props.searchParams;
   const q = searchParams.q ?? "";
-  const weatherLists: WeatherForecastType | undefined = await getForecastWeather(q);
+  let weatherLists: WeatherForecastType | undefined = undefined;
+
+  try {
+    weatherLists = await getForecastWeather(q);
+  } catch (e) {
+    throw new Error(e instanceof Error ? e.message : String(e));
+  }
 
   return (
     <>
