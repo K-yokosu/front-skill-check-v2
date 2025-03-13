@@ -1,8 +1,11 @@
 import Image from "next/image";
 import styles from "./specificDayWeather.module.css";
 import { SpecificDayWeatherType } from "../../types/weather";
+import { getDayText } from "../../lib/weathr";
 
 export default function SpecificDayWeather({ specificDayWeather }: { specificDayWeather: SpecificDayWeatherType }) {
+  const dayText = getDayText(specificDayWeather.forecastday.day.condition.code);
+
   return (
     <div className={styles.specificDayWeatherContainer}>
       <div className={styles.specificDayWeatherHeader}>
@@ -10,7 +13,7 @@ export default function SpecificDayWeather({ specificDayWeather }: { specificDay
       </div>
       <div className={styles.specificDayWeatherInfo}>
         <div className={styles.weather}>
-          <span>{specificDayWeather.forecastday.day.condition.text}</span>
+          <span>{dayText}</span>
           <Image src={`https:${specificDayWeather.forecastday.day.condition.icon}`} alt={specificDayWeather.forecastday.day.condition.text} width={40} height={40} />
         </div>
         <div className={styles.weatherItemContainer}>
