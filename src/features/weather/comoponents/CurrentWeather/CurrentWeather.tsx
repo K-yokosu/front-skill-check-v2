@@ -7,17 +7,30 @@ import { WiDirectionUpRight } from "react-icons/wi";
 export default function CurrentWeather({ currentWeather, locationName, localDay }: { currentWeather: CurrentType; locationName: string; localDay: string }) {
   return (
     <div className={styles.currentWeatherContainer}>
-      <div className={styles.currentWeatherHeader}>
-        <h2>Current Weather</h2>
+      <div className={styles.detailLink}>
         <Link href={`/${locationName}?day=${localDay}`}>
           詳細
           <WiDirectionUpRight />
         </Link>
       </div>
-      <div>
-        <div>
-          天気：{currentWeather.condition.text}
+      <div className={styles.currentWeatherHeader}>
+        <h2>{locationName}</h2>
+      </div>
+      <div className={styles.currentWeatherInfo}>
+        <div className={styles.weather}>
+          <span>{currentWeather.condition.text}</span>
           <Image src={`https:${currentWeather.condition.icon}`} alt={currentWeather.condition.text} width={20} height={20} />
+        </div>
+        <div className={styles.currentTempC}>{currentWeather.temp_c}℃</div>
+        <div className={styles.weatherItemContainer}>
+          <div className={styles.weatherItem}>
+            <p>体感温度: {currentWeather.temp_c}℃</p>
+            <p>風速: {currentWeather.wind_kph}km</p>
+          </div>
+          <div className={styles.weatherItem}>
+            <p>降水量: {currentWeather.precip_mm}</p>
+            <p>湿度: {currentWeather.humidity}%</p>
+          </div>
         </div>
       </div>
     </div>
