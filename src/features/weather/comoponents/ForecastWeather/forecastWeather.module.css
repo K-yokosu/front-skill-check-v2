@@ -1,0 +1,36 @@
+.forecastWeatherContainer {
+  width: 85%;
+  margin-top: 24px;
+}
+
+.forecastWeatherContainer tr {
+  height: 36px;
+}
+
+.forecastWeatherContainer tr td:first-child {
+  width: 110px;
+}
+.forecastWeatherContainer tr td:nth-child(2) {
+  width: 30px;
+}
+
+.forecastWeatherContainer tr td:nth-child(3) {
+  width: 55px;
+  color: var(--secondary-color);
+  text-align: right;
+}
+
+.forecastWeatherContainer tr td:nth-child(4) {
+  width: 55px;
+  text-align: right;
+}
+
+.forecastWeatherContainer tr .detailLink {
+  width: 30px;
+  text-align: right;
+  font-size: 24px;
+}
+
+.forecastWeatherContainer tr .detailLink:hover {
+  color: var(--secondary-color);
+}
